@@ -1,0 +1,179 @@
+#brandpage.bp{
+    // *** VARIABLES - COLORS FOR BUTTONS
+    $colorBtn: (
+        primary:color(green, 500),
+        secondary:color(blue, 500),
+        secondary-dark:color(brand-primary, light),
+        tertiary:color(gray, 0),
+        delete:color(red, 500),
+        gray1:color(gray, 1)
+    );
+
+    // *** VARIABLES - COLORS SATELLITES - FOR BTN BACKGROUND HOVER
+    $colorPercentageBtnHover: 6%;
+    $colorPercentageBtnActive: 15%;
+
+    // *** BUTTONS
+    // USAGE:
+    //	<a href="#" class="or-btn or-btn--primary or-btn--normal or-btn--full">
+    //		<span class="or-btn__inner">
+    //			<svg class="or-btn__inner-icon or-btn__inner-icon--left">
+    //				<use xlink:href="/build/img/i-sprite.svg#i-basket"></use>
+    //			</svg>
+    //			<span class="or-btn__inner-text">Small</span>
+    //		</span>
+    //	</a>
+    .bp-content__carousel .or-btn {
+        @include box-shadow(normal);
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        z-index: 1;
+        @include transition();
+        @include border();
+
+        &__inner {
+            position: relative;
+            overflow: hidden;
+            display: block;
+            @include border();
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            @include transition();
+
+            &-text {
+                color: color(gray, 0);
+                overflow: hidden;
+                line-height: 1;
+                position: relative;
+                text-align: center;
+            }
+
+            &-icon {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                fill: color(gray, 0);
+
+                &--left {
+                    margin: 0 10px 0 0;
+                }
+
+                &--right {
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
+        &:hover {
+            @include box-shadow(hover);
+        }
+
+        // BUTTON SIZE
+        &--small {
+            .or-btn__inner {
+                padding: 0 15px;
+                height: 32px;
+
+                &-text {
+                    @include Roboto(14, 500);
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        &--normal {
+            .or-btn__inner {
+                padding: 0 15px;
+                height: 42px;
+
+                &-text {
+                    @include Roboto(14, 500);
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        &--large {
+            .or-btn__inner {
+                padding: 0 25px;
+                height: 60px;
+
+                &-text {
+                    @include Roboto(20, 500);
+                    line-height: 1.1;
+                }
+
+                &-icon {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &--full {
+            min-width: 166px;
+
+            &-left {
+                .or-btn__inner {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    align-content: stretch;
+                    align-items: center;
+                }
+            }
+
+            &-between {
+                .or-btn__inner {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-content: stretch;
+                    align-items: center;
+                }
+            }
+        }
+
+        // BUTTON COLORS
+        @each $theme,
+        $color in $colorBtn {
+            &--#{$theme} {
+                .or-btn__inner {
+                    background: $color;
+
+                    // DARK TEXT FOR white OR grey BUTTONS
+                    @if ($theme==tertiary) or ($theme==gray1) {
+                        &-text {
+                            color: color(gray, 8);
+                        }
+
+                        &-icon {
+                            fill: color(gray, 8);
+                        }
+                    }
+                }
+
+                &:hover {
+                    .or-btn__inner {
+                        background: darken($color, $colorPercentageBtnHover);
+                    }
+                }
+
+                &:active {
+                    box-shadow: none;
+
+                    .or-btn__inner {
+                        background: darken($color, $colorPercentageBtnActive);
+                    }
+                }
+            }
+        }
+    }
+}

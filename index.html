@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Landing Page Concept</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <style type="text/css">
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                background: #bae2fc;
+            }
+        </style>
+
+        <div id="layout_switch">
+            <button type="button">M</button>
+            <button type="button">3</button>
+            <button type="button">4</button>
+        </div>
+
+        <div id="testLayout" class="layout-1">
+            <div id="articlePage">
+                <!-- BEFORE UPLOADING REMOVE EVERYTHING ABOVE UP TO THIS POINT -->
+                <div id="brandpage" class="bp">
+                    <!-- logo bar -->
+                    <section class="bpBar">
+                        <svg width="128" height="48" viewBox="0 0 128 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M80.1322 42.7442L78.9559 43.4613C78.5941 42.902 77.888 42.5692 76.9654 42.5692C76.1333 42.5692 75.5176 42.8316 75.5176 43.252C75.5176 43.7597 76.2238 43.8816 77.0737 44.0394L78.0156 44.1972C79.137 44.3893 80.205 44.7565 80.205 45.9298C80.205 47.4344 78.4502 47.9422 76.875 47.9422C75.6259 47.9422 74.3237 47.5047 73.5819 46.647L74.8131 45.947C75.356 46.5768 76.1703 46.8737 77.1122 46.8737C77.799 46.8737 78.723 46.6814 78.723 46.0861C78.723 45.6143 78.1623 45.4738 77.1478 45.2815L76.2979 45.1237C75.086 44.897 74.018 44.5456 74.018 43.4268C74.018 42.1317 75.5563 41.5021 76.9669 41.5021C78.2708 41.5021 79.3373 41.9051 80.1337 42.7442" fill="white"/>
+                            <path d="M71.7544 41.6598H70.3246V47.7844H71.7544V41.6598Z" fill="white"/>
+                            <path d="M66.7054 45.316L68.3874 47.7829H66.7408L65.2754 45.5254H63.9004V47.7829H62.4705V41.6585H65.6374C67.2483 41.6585 68.2065 42.4459 68.2065 43.5129C68.2065 44.8956 67.0672 45.2098 66.7054 45.3145M65.4563 44.5271C66.1803 44.5271 66.7054 44.177 66.7054 43.599C66.7054 43.021 66.2351 42.6883 65.2398 42.6883H63.9004V44.5257H65.4563V44.5271Z" fill="white"/>
+                            <path d="M58.1823 41.6598L60.7335 47.7844H59.2311L58.7965 46.5939H55.9187L55.4843 47.7844H53.9817L56.5151 41.6598H58.1793H58.1823ZM58.3988 45.5799L57.368 42.78H57.3502L56.3 45.5799H58.3988Z" fill="white"/>
+                            <path d="M52.7714 43.7238C52.7714 44.9316 51.7212 45.719 50.2201 45.719H48.5364V47.7844H47.1082V41.6598H50.1295C51.9036 41.6598 52.7714 42.552 52.7714 43.7252M49.9486 44.758C50.8535 44.758 51.2881 44.3205 51.2881 43.7252C51.2881 42.8848 50.708 42.6237 49.8938 42.6237H48.5364V44.758H49.9486Z" fill="white"/>
+                            <path d="M69.5237 20.8493H86.0179V18.9057H72.3538V12.6694H82.6122V10.6986H72.3538V4.95989H86.0179V3.01782H69.5237V20.8493Z" fill="white"/>
+                            <path d="M78.0972 0.139099L75.8588 2.56453L82.8703 0.139099H78.0972Z" fill="white"/>
+                            <path d="M113.702 18.9057V3.01782H111.124V20.8493H127.796V18.9057H113.702Z" fill="white"/>
+                            <path d="M96.7051 3.01782L87.326 20.8493H90.4915L92.893 16.2351H104.144L106.56 20.8493H109.702L100.314 3.01782H96.7051ZM94.0795 14.0019L98.5027 5.48199L102.974 14.0019H94.0795Z" fill="white"/>
+                            <path d="M60.5735 13.3965C64.8039 12.2993 65.2102 9.26282 65.1938 8.17848C64.9431 4.99286 62.7197 3.01636 58.7297 3.01636H47.1096V20.8478H49.7558V13.3693H57.3251L62.8933 20.8478H66.2322C66.2322 20.8478 62.2243 15.8091 60.575 13.3951M58.3707 11.2623H49.7558V5.13198H58.6704C60.7202 5.13198 61.8743 6.05711 62.2941 7.23182C62.5655 8.03935 62.3934 9.09644 61.9366 9.81791C61.195 11.0084 59.7768 11.2637 58.3707 11.2637" fill="white"/>
+                            <path d="M31.1805 0C23.7032 0 18.6066 5.0947 18.6066 11.2738C18.6066 17.7712 24.2356 22.3553 31.1805 22.3553C38.1253 22.3553 43.7558 17.8329 43.7558 11.2738C43.7558 5.0947 38.5925 0 31.1805 0ZM31.0929 20.1422C25.9178 20.1422 21.6547 16.1203 21.6547 11.2752C21.6547 6.43005 25.7176 2.2232 31.2931 2.2232C36.8689 2.2232 40.7315 6.43866 40.7315 11.2752C40.7315 16.1117 36.2652 20.1422 31.0929 20.1422Z" fill="white"/>
+                            <path d="M11.9242 9.32453H13.8436L17.313 3.01782H14.52L11.9242 9.32453Z" fill="white"/>
+                            <path d="M2.58094 18.9057V3.01782H0V20.8493H16.6752V18.9057H2.58094Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M63.8885 37.6567H127.756V31.2539V24.8525H63.8885H0.019165V31.2539V37.6567H63.8885ZM7.76644 34.7278V32.7943H9.52414C11.3219 32.7742 12.2312 31.6612 12.2312 30.343C12.2312 29.0248 11.3308 27.8918 9.52414 27.8918H6.19117V34.7278H7.76644ZM9.52414 31.3973H7.76644V29.3361H9.52414C10.2702 29.3361 10.6544 29.8253 10.6544 30.3717C10.6544 30.9181 10.2821 31.3973 9.52414 31.3973ZM21.8475 34.7278H21.846V34.6115L19.9073 32.3453C21.2601 31.8764 21.533 31.0861 21.5433 30.1966C21.5433 28.9947 20.6356 27.8918 18.9283 27.8918H15.5761V34.7278H17.1513V32.4816H18.292L20.1 34.7278H21.846V34.7292L21.8475 34.7278ZM17.1513 29.2013V31.1936H18.9491C19.6759 31.1936 19.9889 30.6657 19.9889 30.2369C19.9784 29.7679 19.6656 29.2013 18.9283 29.2013H17.1513ZM24.7695 31.3098C24.7695 33.5372 26.3238 34.8941 28.5859 34.8941C30.848 34.8941 32.4025 33.5372 32.4025 31.3098C32.4025 29.0822 30.848 27.7253 28.5859 27.7253C26.3238 27.7253 24.7695 29.0822 24.7695 31.3098ZM26.3135 31.3113C26.3135 30.0704 27.2421 29.0938 28.5859 29.0938C29.9596 29.0938 30.8583 30.0417 30.8583 31.3113C30.8583 32.5806 29.9297 33.5185 28.5859 33.5185C27.2421 33.5185 26.3135 32.5519 26.3135 31.3113ZM35.9002 34.7277V27.9018H41.0502V29.2988H37.4754V30.9196H40.8291V32.2764H37.4754V34.7277H35.9002ZM44.5477 34.7278H49.9305V33.322H46.0933V31.9452H49.5775V30.6069H46.0933V29.2888H49.7896V27.8918H44.5477V34.7278ZM57.6794 29.5427L57.6779 29.5412L58.6672 28.7021C57.9404 27.8817 57.1232 27.648 56.0314 27.648C54.5762 27.648 53.2442 28.3709 53.2339 29.7278C53.2146 31.3399 54.5481 31.7013 56.0419 31.8375C57.0016 31.9165 57.4762 32.1789 57.4658 32.7555C57.4658 33.2432 56.8903 33.5659 56.0522 33.5659C55.3357 33.5659 54.4353 33.2734 53.8909 32.5993L52.9521 33.5459C53.5484 34.5026 54.8196 34.9615 56.0419 34.9515C57.5681 34.9415 59.0217 34.3348 59.0217 32.7542C59.0217 31.1734 57.6987 30.6557 56.3057 30.538C55.3965 30.4607 54.781 30.343 54.781 29.7176C54.781 29.2487 55.346 28.9661 56.0432 28.9661C56.5989 28.9661 57.2845 29.142 57.6779 29.5412L57.6779 29.5413L57.6794 29.5427ZM64.9728 28.9661C65.5291 28.9661 66.2157 29.1425 66.6089 29.5427V29.5413L67.5982 28.7021C66.8714 27.8817 66.0541 27.648 64.9623 27.648C63.5072 27.648 62.1752 28.3709 62.1649 29.7278C62.1456 31.3399 63.4791 31.7013 64.9728 31.8375C65.9325 31.9165 66.4071 32.1789 66.3968 32.7555C66.3968 33.2432 65.8212 33.5659 64.9832 33.5659C64.2667 33.5659 63.3663 33.2734 62.8221 32.5993L61.883 33.5459C62.4794 34.5026 63.7506 34.9615 64.9728 34.9515C66.4976 34.9415 67.9512 34.3348 67.9512 32.7542C67.9512 31.1734 66.6282 30.6557 65.2354 30.538C64.326 30.4607 63.7104 30.343 63.7104 29.7176C63.7104 29.2487 64.2757 28.9661 64.9728 28.9661ZM71.3583 34.7278V27.8918H72.9232V34.7278H71.3583ZM76.4194 31.3098C76.4194 33.5372 77.9739 34.8941 80.236 34.8941C82.4979 34.8941 84.0524 33.5372 84.0524 31.3098C84.0524 29.0822 82.4979 27.7253 80.236 27.7253C77.9739 27.7253 76.4194 29.0822 76.4194 31.3098ZM77.9634 31.3113C77.9634 30.0704 78.892 29.0938 80.236 29.0938C81.6095 29.0938 82.5084 30.0417 82.5084 31.3113C82.5084 32.5806 81.5798 33.5185 80.236 33.5185C78.892 33.5185 77.9634 32.5519 77.9634 31.3113ZM92.4685 32.3353L92.3677 30.1866V27.8918H93.9533V34.7278H92.6006L89.0867 30.353L89.1475 32.5991V34.7278H87.5514V27.8918H88.9043L92.4685 32.3353ZM102.662 30.1866L102.763 32.3353L99.1984 27.8918H97.8456V34.7278H99.4417V32.5991L99.3809 30.353L102.895 34.7278H104.247V27.8918H102.662V30.1866ZM113.531 34.7278H108.148V27.8918H113.391V29.2888H109.694V30.6069H113.178V31.9452H109.694V33.322H113.531V34.7278ZM118.674 33.3308V27.8918H117.099V34.7278H122.209V33.3308H118.674Z" fill="white"/>
+                            </svg>
+                    </section>
+
+                    <!-- video -->
+                    <section class="bpVideo">
+                        <video class="bpVideo__player" data-url="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/video/loreal%2015s%202%20aliana%2016x9%20cz.mp4" poster="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poster_v2.jpg" src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/video/loreal%2015s%202%20aliana%2016x9%20cz.mp4"><source src="" type="video/mp4"></video>
+                        <svg class="bpVideo__play" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M71.6239 50.0855L39.0598 71.255L39.0598 28.916L71.6239 50.0855Z" fill="white" fill-opacity="0.65"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM50 88.8889C71.4778 88.8889 88.8889 71.4777 88.8889 50C88.8889 28.5223 71.4778 11.1111 50 11.1111C28.5223 11.1111 11.1111 28.5223 11.1111 50C11.1111 71.4777 28.5223 88.8889 50 88.8889Z" fill="white" fill-opacity="0.65"/>
+                        </svg>
+                    </section>
+
+                    <!-- categories -->
+                    <section class="bpCategories">
+                    <div class="bp-wrapper">
+                        <h2 class="hdl2">Objevte profesionální péči a&nbsp;styling</h2>
+                        <div class="bpTiles">
+                            <a href="/beauty/loreal-professionnel-metal-detox/18910930.htm" class="bpTiles__tile">
+                                <div class="bpTiles__imageWrapper bpTiles__imageWrapper--poskozene-vlasy">
+                                    <picture>
+                                        <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy@2x.webp 2x" />
+                                        <source type="image/png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy@2x.png 2x" />
+                                        <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy.png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/poskozene-vlasy@2x.png 2x" alt="Poškozené vlasy" width="331" height="234" loading="lazy" />
+                                    </picture>
+                                </div>
+                                <div class="bpTiles__nameWrapper">
+                                    <h4 class="hdl4">Poškozené vlasy</h4>
+                                </div>
+                            </a>
+
+                            <a href="/beauty/loreal-professionnel-absolut-repair-molecular/18910931.htm" class="bpTiles__tile">
+                                <div class="bpTiles__imageWrapper bpTiles__imageWrapper--vyziva-vlasu">
+                                    <picture>
+                                        <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu@2x.webp 2x" />
+                                        <source type="image/png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu@2x.png 2x" />
+                                        <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu.png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/vyziva-vlasu@2x.png 2x" alt="Pro výživu vlasů" width="331" height="234" loading="lazy" />
+                                    </picture>
+                                </div>
+                                <div class="bpTiles__nameWrapper">
+                                    <h4 class="hdl4">Pro výživu vlasů</h4>
+                                </div>
+                            </a>
+
+                            <a href="/beauty/loreal-professionnel-steampod/18911028.htm" class="bpTiles__tile">
+                                <div class="bpTiles__imageWrapper bpTiles__imageWrapper--steampod">
+                                    <picture>
+                                        <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod@2x.webp 2x" />
+                                        <source type="image/png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod@2x.png 2x" />
+                                        <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod.png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steampod@2x.png 2x" alt="Steampod" width="331" height="234" loading="lazy" />
+                                    </picture>
+                                </div>
+                                <div class="bpTiles__nameWrapper">
+                                    <h4 class="hdl4">Steampod</h4>
+                                </div>
+                            </a>
+
+                            <a href="/beauty/loreal-professionnel-scalp-advanced/18910942.htm" class="bpTiles__tile">
+                                <div class="bpTiles__imageWrapper bpTiles__imageWrapper--zdrava-pokozka">
+                                    <picture>
+                                        <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka@2x.webp 2x" />
+                                        <source type="image/png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka@2x.png 2x" />
+                                        <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka.png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/zdrava-pokozka@2x.png 2x" alt="Pro zdravou pokožku" width="331" height="234" loading="lazy" />
+                                    </picture>
+                                </div>
+                                <div class="bpTiles__nameWrapper">
+                                    <h4 class="hdl4">Pro zdravou pokožku</h4>
+                                </div>
+                            </a>
+
+                            <a href="/beauty/loreal-professionnel-curl-expression/18910933.htm" class="bpTiles__tile">
+                                <div class="bpTiles__imageWrapper bpTiles__imageWrapper--kudrnate-vlasy">
+                                    <picture>
+                                        <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy@2x.webp 2x" />
+                                        <source type="image/png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy@2x.png 2x" />
+                                        <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy.png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/kudrnate-vlasy@2x.png 2x" alt="Kudrnaté a vlnité vlasy" width="331" height="234" loading="lazy" />
+                                    </picture>
+                                </div>
+                                <div class="bpTiles__nameWrapper">
+                                    <h4 class="hdl4">Kudrnaté a vlnité vlasy</h4>
+                                </div>
+                            </a>
+
+                            <a href="/beauty/loreal-professionnel-tecni-art/18911024.htm" class="bpTiles__tile">
+                                <div class="bpTiles__imageWrapper bpTiles__imageWrapper--styling">
+                                    <picture>
+                                        <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling@2x.webp 2x" />
+                                        <source type="image/png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling@2x.png 2x" />
+                                        <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling.png" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling.png, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/styling@2x.png 2x" alt="Styling" width="331" height="234" loading="lazy" />
+                                    </picture>
+                                </div>
+                                <div class="bpTiles__nameWrapper">
+                                    <h4 class="hdl4">Styling</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    </section>
+
+                    <!-- carousel -->
+                    <section class="bpCarousel">
+                        <div class="bp-wrapper">
+                            <h2 class="hdl2">Aktuální novinky</h2>
+                            <div class="swiper bp-swiper">
+                                <div class="swiper-wrapper">
+                                    <!-- slide -->
+                                    <a href="/beauty/loreal-professionnel-metal-detox/18910930.htm?evt=ac" class="swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz@2x.jpg 2x" alt="Metal Detox" width="1035" height="340" loading="lazy" class="swiper-banner-desktop" />
+                                        </picture>
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/metal-detox-cz-mobile@2x.jpg 2x" alt="Metal Detox" width="768" height="340" loading="lazy" class="swiper-banner-mobile" />
+                                        </picture>
+                                    </a>
+    
+                                    <!-- slide -->
+                                    <a href="/beauty/loreal-professionnel-absolut-repair/18911022.htm?evt=ac" class="swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz@2x.jpg 2x" alt="Absolute Reapir Molecular" width="1035" height="340" loading="lazy" class="swiper-banner-desktop" />
+                                        </picture>
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/repair-cz-mobile@2x.jpg 2x" alt="Absolute Reapir Molecular" width="768" height="340" loading="lazy" class="swiper-banner-mobile" />
+                                        </picture>
+                                    </a>
+    
+                                    <!-- slide -->
+                                    <a href="/beauty/loreal-professionnel-steampod/18911028.htm?evt=ac" class="swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz@2x.jpg 2x" alt="Steampod" width="1035" height="340" loading="lazy" class="swiper-banner-desktop" />
+                                        </picture>
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/banners/steampod-cz-mobile@2x.jpg 2x" alt="Steampod" width="768" height="340" loading="lazy" class="swiper-banner-mobile" />
+                                        </picture>
+                                    </a>
+                                </div>
+    
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- about -->
+                    <section class="bpAbout">
+                        <div class="bp-wrapper">
+                            <h2 class="hdl2">Pařížská elegance</h2>
+                            <p class="body-1 body-1--subHdl">Objevte svou jedinečnou krásu s prémiovou vlasovou kosmetikou <strong>L'Oréal Professionnel Paris</strong>. Francouzská značka už více než 100 let udává kadeřnické trendy a inspiruje lidi z celého světa. Revoluční přípravky vlasové péče odráží dlouhá léta výzkumů, inovací a zkušeností. Chcete-li získat perfektně zdravé vlasy a dokonalý účes, vsaďte na L'Oréal Professionnel.</p>
+                        </div>
+                    </section>
+
+                     <!-- categories -->
+                     <section class="bpCategories">
+                        <div class="bp-wrapper">
+                            <div class="bpTiles">
+                                <a href="/beauty/loreal-professionnel-steampod/18911028.htm?evt=ac" class="bpTiles__tile">
+                                    <div class="bpTiles__imageWrapper">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/steam-power@2x.jpg 2x" alt="Objevte šetrnou sílu páry" width="331" height="160" loading="lazy" />
+                                        </picture>
+                                    </div>
+                                    <div class="bpTiles__nameWrapper">
+                                        <h4 class="hdl4">Objevte šetrnou sílu páry</h4>
+                                    </div>
+                                </a>
+    
+                                <a href="/maxi/vlasova-kosmetika/loreal-professionnel/18852930-v3906.htm" class="bpTiles__tile">
+                                    <div class="bpTiles__imageWrapper">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/hair-care@2x.jpg 2x" alt="Svěřte své vlasy do péče L'Oréal Professionnel" width="331" height="160" loading="lazy" />
+                                        </picture>
+                                    </div>
+                                    <div class="bpTiles__nameWrapper">
+                                        <h4 class="hdl4">Svěřte své vlasy do péče L'Oréal Professionnel</h4>
+                                    </div>
+                                </a>
+    
+                                <a href="/beauty/loreal-professionnel-tecni-art/18911024.htm" class="bpTiles__tile">
+                                    <div class="bpTiles__imageWrapper">
+                                        <picture>
+                                            <source type="image/webp" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling.webp, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling@2x.webp 2x" />
+                                            <source type="image/jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling@2x.jpg 2x" />
+                                            <img src="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling.jpg" srcset="https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling.jpg, https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/prof-styling@2x.jpg 2x" alt="Profesionální styling" width="331" height="160" loading="lazy" />
+                                        </picture>
+                                    </div>
+                                    <div class="bpTiles__nameWrapper">
+                                        <h4 class="hdl4">Profesionální styling</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- TO REMOVE -->
+            </div>
+        </div>
+        <script src="build/js/script.min.js" type="module"></script>
+        
+        <link rel="stylesheet" href="build/css/style.min.css">
+
+    </body>
+
+</html>

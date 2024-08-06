@@ -1,0 +1,102 @@
+#brandpage{
+    .bpTiles{
+        margin: 30px auto 0;
+        display: flex;
+        gap: 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        &__tile{
+            border-radius: 20px;
+            background: color(gray, 9);
+            overflow: hidden;
+            display: table;
+            flex: 1 1 30%;
+            min-width: 205px;
+
+            &:hover{
+                .bpTiles__imageWrapper img{
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &__imageWrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: color(gray, 9);
+
+            &--poskozene-vlasy{
+                background: url('https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/bgr-poskozene-vlasy.jpg') center;
+            }
+            
+            &--vyziva-vlasu{
+                background: url('https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/bgr-vyziva-vlasu.jpg') center;
+            }
+
+            &--steampod{
+                background: url('https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/bgr-steampod.jpg') center;
+            }
+
+            &--zdrava-pokozka{
+                background: url('https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/bgr-zdrava-pokozka.jpg') center;
+            }
+            
+            &--kudrnate-vlasy{
+                background: url('https://cdn.alza.cz/Foto/or/bp/loreal-pro/build/img/bgr-kudrnate-vlasy.jpg') center;
+            }
+            
+            img{
+                transition: .3s ease-in-out;
+            }
+        }
+
+        &__nameWrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .hdl4{
+                color: color(gray, 0);
+                width: 100%;
+                padding: 20px 10px;
+            }
+        }
+    }
+}
+
+// mobile + app
+@media only screen and (max-width: 710px){
+    .mobile,
+    .mobileapp{
+        #brandpage{
+            .bpTiles{
+                gap: 10px;
+        
+                &__tile{
+                    flex: none;
+                    width: calc(50% - 10px);
+                    min-width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .mobile,
+    .mobileapp{
+        #brandpage{
+            .bpTiles{
+                &__tile{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

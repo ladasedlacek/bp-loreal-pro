@@ -1,0 +1,272 @@
+// size mixin
+@function size($value) {
+    $style: ($value / 16) + rem;	
+    @return $style;
+}
+
+// roboto
+@mixin roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+#brandpage.bp{
+    // headlines
+    .notMoveH1,
+    .hdl2,
+    .hdl3,
+    .hdl4{
+        font-weight: 700;
+        @include roboto();
+        display: block;
+        color: color(gray, 8);
+        margin: 0;
+    }
+    
+    .notMoveH1{
+        font-size: size(50);
+        line-height: size(62);
+    }
+
+    .notMoveH1.h1B{
+        font-size: size(52);
+        line-height: size(72);
+    }
+
+    .notMoveH1.h1S{
+        font-size: size(40);
+        line-height: size(52);
+    }
+    
+    .hdl2{
+        font-size: size(30);
+        line-height: size(32);
+    }
+        
+    .hdl3{
+        font-size: size(20);
+        line-height: size(32);
+    }
+
+    .hdl4{
+        font-size: size(18);
+        line-height: size(30);
+        font-weight: 700;
+
+        &--link{
+            display: inline;
+            text-decoration: underline;
+        }
+    }
+    
+    .category-tiles__tile-name{
+        text-align: left;
+    }
+
+    // body text
+    p,
+    a:not(.category-tiles__tile),
+    li:not(.lpBars__bar),
+    span:not(.react-carousel span):not(.or-btn__inner span):not(.category-tiles__tile span),
+    .perex,
+    .body-1,
+    .body-2,
+    .listItems{
+        font-weight: 400;
+        @include roboto();
+        color: color(gray, 8);
+        margin: 0;
+    }
+    
+    .perex,
+    .body-1,
+    .body-2,
+    .listItems{
+        &--link{
+            font-weight: 400;
+            @include roboto();
+            text-decoration: underline;
+            color: color(gray, 9);
+            transition: .33s ease-in-out;
+            display: table;
+
+            &:hover{
+                color: color(blue, 500);
+            }
+        }
+    }
+
+    .perex{
+        font-size: size(16);
+        line-height: size(26);
+
+        sup{
+            font-size: size(12);
+            line-height: size(12);
+            vertical-align: super;
+        }
+    }
+
+    .body-1,
+    .body-1--item{
+        font-size: size(14);
+        line-height: size(24);
+
+        sup{
+            font-size: size(10);
+            line-height: size(10);
+            vertical-align: super;
+        }
+    }
+
+    .body-1--subHdl{
+        max-width: 90%;
+        margin: 30px auto 0;
+    }
+
+    .body-2{
+        font-size: size(12);
+        line-height: size(21);
+        color: color(gray, 5);
+
+        sup{
+            font-size: size(8);
+            line-height: size(8);
+            vertical-align: super;
+        }
+    }
+
+    .subHdl{
+        font-size: size(18);
+        line-height: size(30);
+        margin: 10px auto 0;
+    }
+
+    // list items
+    .lpItems{
+        padding-left: 0;
+        margin-top: 20px;
+
+        &__item{
+            color: color(gray, 8);
+            margin-top: 8px;
+            padding-left: 32px;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 9px;
+                width: 8px;
+                height: 8px;
+                background-color: color(gray, 8);
+                border-radius: 100px;
+            }
+
+            strong{
+                font-weight: 500;
+            }
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+        }
+    }
+
+    // warning message
+    .body-2.lpInfoMessage{
+        padding: 12px 15px;
+        border-radius: 100px;
+        background-color: color(gray, 0);
+        margin: 24px auto 0;
+        display: inline-block;
+        color: color(gray, 0);
+        font-weight: 500;
+        position: relative;
+        padding-left: 45px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 13px;
+            background: url('https://cdn.alza.cz/Foto/or/lp/alzaexpres-complet/build/img/icons-circle-info.svg') center no-repeat;
+            background-size: 100%;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .body-1--subHeadline,
+    .perex--subHeadline{
+        max-width: 75%;
+        margin: 20px auto 0;
+    }
+
+    .perex--short{
+        max-width: 75%;
+        margin: 40px auto 0;
+    }
+
+    strong{
+        font-weight: 700;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+}
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #brandpage.bp,
+    .mobileapp #brandpage.bp{
+        .notMoveH1,
+        .notMoveH1.h1B{
+            font-size: size(40);
+            line-height: size(52);
+        }
+
+        .hdl2{
+            font-size: size(30);
+            line-height: size(42);
+        }
+
+        .hdl3{
+            font-size: size(24);
+            line-height: size(36);
+        }
+
+        .subHdl,
+        .subHdl--link{
+            font-size: size(18);
+            line-height: size(30);
+            max-width: 100%;
+        }
+
+        .body-1--subHeadline{
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .mobile #brandpage.bp,
+    .mobileapp #brandpage.bp{
+        .perex--short{
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .mobile #brandpage.bp,
+    .mobileapp #brandpage.bp{
+        .notMoveH1{
+            strong{
+                font-size: size(55);
+                line-height: size(65);
+            }
+        }
+    }
+}

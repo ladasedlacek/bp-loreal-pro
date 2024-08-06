@@ -1,0 +1,123 @@
+@mixin center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity = $opacity-ie); //IE8
+}
+
+// Fonts
+@mixin roboto{
+    font-family: 'Roboto', sans-serif;
+}  
+
+// *** MIXIN - TRANSITION
+@mixin transition($args: all 200ms ease-in-out) {
+    transition: $args;
+    // USAGE @include transition();
+}
+
+// *** MIXIN - BORDER-RADIUS
+@mixin border($radius: 4) {
+    border-radius: $radius + px;
+    // USAGE @include border(4);
+}
+
+// *** MIXIN - BOX-SIZING
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+    // USAGE @include box-sizing(border-box);
+}
+
+// *** MIXIN - BOX-SHADOW
+@mixin box-shadow($option) {
+    @if $option == normal {
+      box-shadow: 0 1px 4px rgba(color(gray,9), 0.15);
+    } @else if $option == hover {
+      box-shadow: 0 1px 8px rgba(color(gray,9), 0.3);
+    } @else {
+      @error "Neplatný stav. Použij 'normal' nebo 'hover'";
+    }
+    // USAGE @include box-shadow(normal), box-shadow(hover);
+}  
+
+// *** MIXIN - FONT-FAMILY
+@mixin Roboto($size: 16, $weight: 400, $line-height: 1.5) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size+px;
+  font-weight: $weight; //400, 500, 700,
+  line-height: $line-height
+}
+
+// *** SKELETON
+@mixin skeleton {
+    .skeleton {
+        position: relative;
+        overflow: hidden;
+        border-color: transparent;
+        @include border(4);
+        z-index: 10;
+        box-shadow: none;
+        pointer-events: none;
+
+        &::before {
+            content: "";
+            background: color(gray, 3);
+            position: absolute;
+            inset:0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        &::after {
+            content: "";
+            background: linear-gradient(90deg, transparent, color(gray, 0), transparent);
+            position: absolute;
+            inset:0;
+            width: 100%;
+            height: 100%;
+            animation: skeleton-animation 1s infinite;
+            z-index: 11;
+        }
+
+        &--block {
+            &::before {
+                background: color(gray, 0);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @keyframes skeleton-animation {
+        0% {
+            transform: translateX(-100%)
+        }
+    
+        to {
+            transform: translateX(100%)
+        }
+    }
+}

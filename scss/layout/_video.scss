@@ -1,0 +1,45 @@
+#brandpage{
+    .bpVideo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: relative;
+        width: 100%;
+
+        &__player {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__play {
+            inset: 0;
+            position: absolute;
+            margin: auto;
+            cursor: pointer;
+            transition: all 222ms ease-in-out;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        &__play.hide {
+            opacity: 0;
+        }
+
+        .fr-video {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile #brandpage .pdp-video__player {
+        width: 100%;
+    }
+}  

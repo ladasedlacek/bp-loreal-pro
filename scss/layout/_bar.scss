@@ -1,0 +1,7 @@
+#brandpage.bp{
+    .bpBar{
+        height: 84px;
+        background-color: color(gray, 9);
+        @include flex;
+    }
+}

@@ -1,0 +1,150 @@
+#brandpage.bp{
+    .bpCarousel{
+        .bp-swiper{
+            padding: 0;
+            margin: 30px auto 0;
+        }
+
+        .swiper-slide{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            opacity: 0;
+
+            img{
+                width: 100%;
+            }
+
+            .swiper-banner-mobile{
+                display: none;
+            }
+
+            &-active{
+                opacity: 1;
+            }
+
+            &--light{
+                .bp-banner-carousel__text-wrapper{
+                    .hdl2,
+                    .hdl3{
+                        color: color(gray, 0);
+                    }
+                }
+            }
+
+            &--dark{
+                .bp-banner-carousel__text-wrapper{
+                    .hdl2,
+                    .hdl3{
+                        color: color(gray, 8);
+                    }
+                }
+            }
+
+            &--manual{
+                padding: 40px 90px;
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                min-height: 350px;
+            }
+        }
+
+        a.swiper-slide{
+            padding: 0;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.3563 17.6937C6.45301 17.7908 6.56795 17.8678 6.69451 17.9204C6.82106 17.9729 6.95676 18 7.0938 18C7.23084 18 7.36653 17.9729 7.49309 17.9204C7.61964 17.8678 7.73458 17.7908 7.8313 17.6937L14.7563 10.7687C14.8335 10.6916 14.8948 10.6 14.9367 10.4992C14.9785 10.3984 15 10.2903 15 10.1812C15 10.0721 14.9785 9.96398 14.9367 9.86317C14.8948 9.76236 14.8335 9.67079 14.7563 9.59369L7.82829 2.6687C7.63231 2.47497 7.36762 2.36667 7.09205 2.36747C6.81647 2.36827 6.55241 2.47809 6.35755 2.67295C6.16269 2.86781 6.05287 3.13187 6.05207 3.40745C6.05127 3.68302 6.15957 3.94771 6.3533 4.14369L12.3863 10.1857L6.3473 16.2277C6.15466 16.4236 6.04747 16.6878 6.04915 16.9626C6.05084 17.2373 6.16127 17.5002 6.3563 17.6937Z" fill="white"/></svg>') center no-repeat;
+            background-color: color(gray, 9);
+            border-radius: 100px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba($color: color(bp, blue), $alpha: .1);
+
+            &::after{
+                display: none;
+            }
+        }
+
+        .swiper-button-disabled{
+            display: none;
+        }
+
+        .swiper-button-prev{
+            left: 15px;
+            top: 50%;
+            transform: translate(0, 0) rotate(180deg);
+        }
+
+        .swiper-button-next{
+            left: auto;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, 0);
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 0;
+            padding: 12px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            align-items: center;
+        }
+
+        .swiper-pagination-bullet{
+           background: color(gray, 9);
+           width: 8px;
+           height: 8px;
+           border-radius: 100px;
+           opacity: .35;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active{
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+        }
+
+        &__text-wrapper{
+            text-align: left;
+
+            .hdl3{
+                font-weight: 500;
+                margin-top: 8px;
+            }
+
+            .btn{
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+// mobile + app
+@media only screen and (max-width: 770px){
+    .mobile #brandpage.bp,
+    .mobileapp #brandpage.bp{
+        .bpCarousel{
+            .swiper-button-next,
+            .swiper-button-prev{
+                display: none;
+            }
+
+            .swiper-banner-desktop{
+                display: none;
+            }
+
+            .swiper-banner-mobile{
+                display: block;
+            }
+        }
+    }
+}
